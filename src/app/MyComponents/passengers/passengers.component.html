@@ -1,0 +1,98 @@
+<div
+  class="card card-custom my-4 mx-5 p-4"
+  style="background-color: rgba(0, 0, 0, 0.5); box-shadow: 0 0 10px #000"
+>
+  <form (ngSubmit)="onProceed()">
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="first-name" class="form-label text-white">First Name</label>
+        <input
+          type="text"
+          [(ngModel)]="firstName"
+          name="firstName"
+          class="form-control"
+          id="first-name"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="last-name" class="form-label text-white">Last Name</label>
+        <input
+          type="text"
+          [(ngModel)]="lastName"
+          name="lastName"
+          class="form-control"
+          id="last-name"
+          required
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-6">
+        <label for="date-of-birth" class="form-label text-white">Date of Birth</label>
+        <input
+          type="date"
+          [(ngModel)]="birthDate"
+          name="birthDate"
+          class="form-control"
+          id="date-of-birth"
+          required
+        />
+      </div>
+      <div class="col-md-6">
+        <label for="gender" class="form-label text-white">Gender</label>
+        <select
+          class="form-control"
+          [(ngModel)]="gender"
+          name="gender"
+          id="gender"
+          required
+        >
+          <option>Male</option>
+          <option>Female</option>
+          <option>Other</option>
+        </select>
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label for="userId" class="form-label text-white">Plane Code</label>
+        <input
+          type="text"
+          name="planeId"
+          class="form-control"
+          value="{{ myArray[1] }}"
+          disabled="disabled"
+          id="userId"
+        />
+      </div>
+    </div>
+    <div class="row mb-3">
+      <div class="col-md-12">
+        <label for="category" class="form-label text-white">Category</label>
+        <select
+          class="form-control"
+          [(ngModel)]="categoryId"
+          name="category"
+          id="category"
+          required
+        >
+          <option value="7001">Regular</option>
+          <option value="7002">Senior Citzen</option>
+          <option value="7003">Students</option>
+          <option value="7004">Doctors & Nurses</option>
+          <option value="7005">Armed Forces</option>
+        </select>
+      </div>
+    </div>
+    <button
+      type="button"
+      class="btn btn-success"
+      (click)="addPassenger()"
+      style="margin-right: 10px"
+    >
+      Add Passenger
+    </button>
+    <button type="submit" class="btn btn-primary">Proceed</button>
+  </form>
+</div>

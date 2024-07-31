@@ -1,0 +1,268 @@
+body {
+  background-color: #f8f9fa;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.header {
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+.logo {
+  height: 50px;
+  margin: 10px 20px;
+}
+.nav-link {
+  font-size: 1.2rem;
+  margin-right: 20px;
+}
+.hero-section {
+  background-size: cover;
+  background-position: center center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-section::before{
+background-image: url("../../../assets/img/TakeOff.jpg");
+width: 100%;
+height: 105vh;
+background-size: cover;
+content: "";
+position:absolute;
+left: 0;
+right: 0;
+top: 55px;
+bottom: 0;
+z-index: -1;
+display: block;
+filter: blur(2px);
+}
+
+.bg-headline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.headline{
+    color:rgb(230, 213, 118) !important;
+    text-align: center !important;
+    margin: 0 !important;
+}
+
+
+img{
+    width:465px;
+    height: 400px;
+    border-radius: 10px;
+    opacity: 0.0;
+    border-radius: 10px;
+    box-shadow: 0 0 7px #000;
+}
+.hero-section h1 {
+  font-size: 5rem;
+  color: #fff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 50px;
+  animation: text-shadow-animation 3s infinite;
+}
+@keyframes text-shadow-animation {
+  0% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  50% {
+    text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+  }
+  100% {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+}
+.book-flight-section {
+  background-color: #fff;
+  padding: 50px;
+  margin-top: 50px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  animation: scale-animation 2s infinite;
+}
+@keyframes scale-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.book-flight-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.form-label {
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-control {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+.form-control:focus {
+  border-color: #47b8e0;
+  box-shadow: none;
+}
+.form-select {
+  border: none;
+  border-bottom: 2px solid #ccc;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 10px 0;
+  margin-bottom: 30px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%2347B8E0" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"%3E%3Cpolyline points="6 9 12 15 18 9"%3E%3C/polyline%3E%3C/svg%3E');
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+}
+.form-select:focus {
+  border-color: #47b8e0;
+  box-shadow: none;
+}
+.form-select option {
+  background-color: #fff;
+}
+.form-check-label {
+  font-weight: bold;
+  margin-bottom: 10px;
+  display: block;
+}
+.form-check-input {
+  margin-right: 10px;
+}
+.btn-book-flight {
+  background-color: #47b8e0;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 30px;
+  font-size: 1.2rem;
+  transition: background-color 0.2s ease-in-out;
+}
+.btn-book-flight:hover {
+  background-color: #3292b2;
+  color: #fff;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.features-section {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.features-section h2 {
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: bold;
+}
+
+.feature-item {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.feature-item i {
+  font-size: 40px;
+  color: #f66f00;
+  margin-bottom: 20px;
+}
+
+.feature-item h4 {
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.feature-item p {
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.call-to-action-section {
+  background-color: #f8f8f8;
+  padding: 80px 0;
+}
+
+.call-to-action-section h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.call-to-action-section p {
+  font-size: 18px;
+  margin-bottom: 30px;
+}
+
+.call-to-action-section .btn-primary {
+  font-size: 20px;
+  padding: 15px 30px;
+}
+
+.about-section {
+  background-color: black;
+  padding: 20px;
+  color: white;
+}
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+.about-section p {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+.about-section a {
+  color: #47b8e0;
+  text-decoration: none;
+}
+.about-section a:hover {
+  text-decoration: underline;
+}
+.footer {
+  background-color: black;
+  padding: 50px;
+  color: white;
+  text-align: center;
+}
+.footer p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+.footer a {
+  color: #47b8e0;
+  text-decoration: none;
+}
+.footer a:hover {
+  text-decoration: underline;
+}

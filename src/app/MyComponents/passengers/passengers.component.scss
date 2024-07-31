@@ -1,0 +1,16 @@
+.card-custom::before{
+    background-image: url("../../../assets/img/Clouds.jpg");
+    width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block;
+    opacity: 0.8;
+	filter: blur(2px);
+}

@@ -1,0 +1,35 @@
+body {
+    background-color: #f8f9fa;
+  }
+  .thankyou-card {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 50px;
+    margin: 50px auto;
+    max-width: 600px;
+    text-align: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+  .thankyou-card h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  .thankyou-card p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  .thankyou-card a {
+    color: #fff;
+  }
+  .btn-primary {
+    background-color: #008cba;
+    border-color: #008cba;
+    font-size: 1.2rem;
+    padding: 10px 30px;
+    margin-top: 30px;
+    transition: all 0.2s ease;
+  }
+  .btn-primary:hover {
+    background-color: #0077a3;
+    border-color: #0077a3;
+  }

@@ -1,0 +1,44 @@
+.passenger-details {
+    background-color:bisque;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:20px;
+    margin-right:20px;
+    padding: 20px;
+  }
+
+  .fare-details{
+    background-color: #fff;
+    border-radius: 5px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left:30%;
+    margin-right:30%;
+    padding: 20px;
+  }
+
+
+.passenger-bg::before{
+    background: rgb(219, 224, 224);
+    width: 100%;
+	height: 100%;
+	background-size: cover;
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	z-index: -1;
+	display: block; 
+}
+  
+  .passenger-details h4 {
+    margin-bottom: 20px;
+  }
+  
+  .passenger-details p {
+    margin-bottom: 10px;
+  }
+  

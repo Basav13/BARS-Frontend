@@ -1,0 +1,55 @@
+<div class="card card-custom">
+  <form ngNativeValidate (ngSubmit)="onSubmit()">
+    <!-- Email input -->
+    <div class="header-text">
+        Login
+    </div>
+    <div class="form-outline mb-4">
+      <input
+        type="email"
+        [(ngModel)]="email"
+        name="email"
+        id="form2Example1"
+        class="form-control"
+        required
+        placeholder="Username*"
+      />
+      <label class="form-label" for="form2Example1"></label>
+    </div>
+
+    <!-- Password input -->
+    <div class="form-outline mb-4">
+      <input
+        type="{{ showPassword ? 'text' : 'password' }}"
+        [(ngModel)]="password"
+        name="password"
+        id="form2Example2"
+        class="form-control"
+        required
+        placeholder="Password*"
+      />
+      <label class="form-label" for="form2Example2"></label>
+      <div class="form-check mb-2">
+        <input class="form-check-input" type="checkbox" (change)="toggleShowPassword()" />
+        <label class="form-check-label text-white">Show password</label>
+      </div>
+    </div>
+
+    <!-- Submit button -->
+    <div class="btn-custom">
+      <button type="submit" class="btn btn-primary btn-block w-25 mb-4">
+        Sign in
+      </button>
+    </div>
+
+    <!-- Register buttons -->
+    <div class="text-center">
+      <p>
+        <span class="text-white">Not a member? </span
+        ><a routerLink="/register"
+          ><span class="font-weight-bold">Register</span></a
+        >
+      </p>
+    </div>
+  </form>
+</div>

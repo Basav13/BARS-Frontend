@@ -1,0 +1,10 @@
+<h2 class="container fw-bold my-3">Your Bookings</h2>
+<div *ngIf="bookings && bookings.length > 0">
+    <div *ngFor="let booking of bookings">
+        <app-bookings-item [booking]="booking"></app-bookings-item>
+    </div>
+</div>
+<div  *ngIf="!bookings || bookings.length == 0">
+    <p style="margin-left:85px;">No bookings found.</p>
+    <button class="btn btn-primary rounded-2" style="margin-left:85px;" routerLink="/flight" >Book a ticket</button>
+</div>

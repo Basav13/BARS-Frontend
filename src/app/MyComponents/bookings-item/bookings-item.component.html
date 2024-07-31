@@ -1,0 +1,50 @@
+<div class="container bg-custom rounded-3">
+    <div class="booking-details">
+      
+      <div class="row">
+        <div class="col-md-4"><strong>Booking Reference Number:</strong></div>
+        <div class="col-md-8">{{booking.refNo}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>First Name:</strong></div>
+        <div class="col-md-8">{{booking.fName}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Last Name:</strong></div>
+        <div class="col-md-8">{{booking.lName}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Email:</strong></div>
+        <div class="col-md-8">{{booking.user.email}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Plane ID:</strong></div>
+        <div class="col-md-8">{{booking.flight.planes.planeId}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Flight Date:</strong></div>
+        <div class="col-md-8">{{booking.flightDate}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Category:</strong></div>
+        <div class="col-md-8">{{booking.fareCategory.name}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Amount:</strong></div>
+        <div class="col-md-8">{{booking.amount}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Status:</strong></div>
+        <div class="col-md-8">{{booking.status}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-4"><strong>Booking Date:</strong></div>
+        <div class="col-md-8">{{booking.lastUpdateTime}}</div>
+      </div>
+      <div class="row mt-3" *ngIf="booking.status != 'CANCELLED'">
+        <div class="col-md-12 text-center">
+            <button class="btn btn-danger" (click)="onCancel()">Cancel Booking</button>
+        </div>
+    </div>
+    </div>
+  </div>

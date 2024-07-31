@@ -1,0 +1,139 @@
+<div class="wrapper rounded-3">
+  <form ngNativeValidate>
+    <div class="form-group border-bottom d-flex align-items-center flex-wrap">
+      <label class="option my-sm-0 my-2">
+        <input type="radio" name="radio" checked /><span class="text-white"
+          >One Way</span
+        >
+        <span class="checkmark"></span>
+      </label>
+      <label class="option my-sm-0 my-2 mx-3">
+        <input type="radio" name="radio" /><span class="text-white"
+          >Round Trip</span
+        >
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="form-group d-sm-flex margin">
+      <div
+        class="d-block align-items-center flex-fill me-sm-1 my-sm-0 my-4 border-bottom position-relative"
+      >
+        <label for="sourceId" class="mb-2 text-white">From*</label>
+        <select
+          type="text"
+          [(ngModel)]="sourceId"
+          name="sourceId"
+          id="sourceId"
+          required
+          class="form-select"
+          style="height: 6vh"
+        >
+          <option *ngFor="let airport of airports" [value]="airport.airportId">
+            {{ airport.airportCode }}-{{ airport.airportName }}
+          </option>
+        </select>
+      </div>
+
+      <div
+        class="d-block align-items-center flex-fill ms-sm-1 my-sm-0 my-4 border-bottom position-relative"
+      >
+        <label for="destId" class="mb-2 text-white">To*</label>
+        <select
+          type="text"
+          name="destId"
+          [(ngModel)]="destId"
+          id="destId"
+          required
+          class="form-select"
+          style="height: 6vh"
+        >
+          <option *ngFor="let airport of airports" [value]="airport.airportId">
+            {{ airport.airportCode }}-{{ airport.airportName }}
+          </option>
+        </select>
+      </div>
+    </div>
+    <div class="form-group d-flex margin">
+      <div
+        class="d-block align-items-center flex-fill me-sm1 my-sm-0 border-bottom position-relative"
+      >
+        <label for="departDate" class="mb-2 text-white">Departure*</label>
+        <input
+          type="date"
+          [(ngModel)]="flightDate"
+          name="flightDate"
+          id="departDate"
+          required
+          placeholder="Depart Date"
+          class="form-control"
+        />
+      </div>
+    </div>
+    <div class="form-group d-flex margin">
+      <div
+        class="d-block align-items-center flex-fill me-sm1 my-sm-0 border-bottom position-relative"
+      >
+        <label for="sortField" class="mb-2 text-white">Sort By</label>
+        <select
+          type="text"
+          name="sortField"
+          [(ngModel)]="sortField"
+          id="sortField"
+          class="form-select"
+          style="height: 6vh"
+        >
+          <option value="" selected disabled>None</option>
+          <option value="slotFrom">By Departure</option>
+          <option value="slotTo">By Arrival</option>
+          <option value="fare">By Fare</option>
+        </select>
+        <div class="label" id="sortField"></div>
+      </div>
+    </div>
+    <div class="form-group my-3">
+      <button
+        type="button"
+        class="btn btn-custom btn-primary rounded-2 d-flex justify-content-center text-center p-3"
+        (click)="onSearch()"
+      >
+        Search Flights
+      </button>
+
+      <div *ngIf="flight" class="my-2">
+        <div class="d-flex my-2 bg-white rounded-3" id="tableHead">
+          <p class="mx-4">Plane Code</p>
+          <p class="mx-4">From</p>
+          <p class="mx-5">To</p>
+          <p class="mx-3">Duration</p>
+          <p class="mx-2">Base Fare</p>
+          <p class="mx-2">Seats</p>
+        </div>
+        <div
+          *ngFor="let row of flight; let i = index"
+          class="d-flex my-2 rounded-3 justify-content-center align-items-center"
+          id="flights"
+        >
+        <div class="d-flex">
+          <p class="mx-2">{{row[1]}}</p>
+          <p class="mx-4">{{row[4]}}</p>
+          <p class="mx-4">{{row[5]}}</p>
+          <p class="mx-4">{{ getDuration(row[4], row[5]).hours }}h {{ getDuration(row[4], row[5]).minutes }}m</p>
+          <p class="mx-4">{{row[6]}}</p>
+          <p class="mx-4">{{row[7]}}</p>
+        </div>
+          <!-- <div *ngFor="let item of row; let j = index">
+            <p class="mx-4" *ngIf="j !== 0">{{item}}</p>
+          </div>  -->
+          <button
+            type="button"
+            class="btn p-2 btn-custom rounded mx-2"
+            style="background-color: orange;"
+            (click)="onButtonClick(i)"
+          >
+           <span class="fw-bold">Book</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

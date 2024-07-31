@@ -1,0 +1,43 @@
+<div class="container rounded-3">
+    <div class="row justify-content-center">
+      <div class="col-md-6">
+        <div class="card" style="background-color: bisque;">
+          <div class="card-header">
+            <h4 class="mb-0">Update User Details</h4>
+          </div>
+          <div class="card-body">
+            <form (ngSubmit)="onUpdate()">
+              <div class="form-group">
+                <label for="first-name">First Name:</label>
+                <input type="text" class="form-control rounded-2" id="first-name" [(ngModel)]="user.firstName" name="first-name" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Last Name:</label>
+                <input type="text" class="form-control rounded-2" id="last-name" [(ngModel)]="user.lastName" name="last-name" required>
+              </div>
+              <div class="form-group">
+                <label for="birth-date">Birth Date:</label>
+                <input type="text" class="form-control rounded-2" id="birth-date" [(ngModel)]="user.birthDate" name="birth-date" required>
+              </div>
+              <div class="form-group">
+                <label for="gender">Gender:</label>
+                <input type="text" class="form-control rounded-2" id="gender" [(ngModel)]="user.gender" name="gender" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Email:</label>
+                <input type="text" class="form-control rounded-2" id="email" [(ngModel)]="user.email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="last-name">Password:</label>
+                <input type="text" class="form-control rounded-2" id="password" [(ngModel)]="user.password" name="password" required>
+              </div>
+              <div class="form-group text-center">
+                <button type="submit" class="btn btn-primary my-3">Update</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
